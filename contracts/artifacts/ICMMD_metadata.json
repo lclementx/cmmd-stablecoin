@@ -1,0 +1,98 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "epoch",
+						"type": "uint256"
+					},
+					{
+						"internalType": "int256",
+						"name": "supplyDelta",
+						"type": "int256"
+					}
+				],
+				"name": "rebase",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalSupply",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/CMMDPolicy.sol": "ICMMD"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/CMMDPolicy.sol": {
+			"keccak256": "0x1114493c2e29f283c02c08eaab3b20ac794a858650dcb0f79814357e4d2bf27e",
+			"license": "GPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://d390bb5295c98b99389667abc459ae5800dcd558b8f62b1f9f8fa8e8138f36c1",
+				"dweb:/ipfs/QmVyKRn5LKwemrvN2SmPpPnaWCd8T36Mk2S4XtuCTXpJtM"
+			]
+		},
+		"contracts/SafeMath.sol": {
+			"keccak256": "0x9df017fe6246ad0038edd17dbae1eb17cda90595586e10ba6db9630688819371",
+			"urls": [
+				"bzz-raw://959f430947d3c01472c927d43e2420ff5603de0237876cd85443ee3031283234",
+				"dweb:/ipfs/Qmdk4qzwGhMLVH6cW7jeYSkuRBWyszz37Yyt5Xhc4zgHvM"
+			]
+		},
+		"contracts/SafeMathInt.sol": {
+			"keccak256": "0x5b01d664d0ef57fff63ebfb76f068406e9dae631ecbd14e344af1ece8391c547",
+			"license": "GPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://9f2a990a8008bc668bc6c89a4a101d46dcbb13d7b2ba7f8415f9a442542d5c0f",
+				"dweb:/ipfs/QmQqAmprT8C637VFQAakfqeWh6NwrRQoCgEn6DjZT6xHav"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,387 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "epoch",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "exchangeRate",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "cpi",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "int256",
+						"name": "requestedSupplyAdjustment",
+						"type": "int256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "timestampSec",
+						"type": "uint256"
+					}
+				],
+				"name": "LogRebase",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "cmmd",
+				"outputs": [
+					{
+						"internalType": "contract ICMMD",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "normalizedRate",
+						"type": "int256"
+					},
+					{
+						"internalType": "int256",
+						"name": "lower",
+						"type": "int256"
+					},
+					{
+						"internalType": "int256",
+						"name": "upper",
+						"type": "int256"
+					},
+					{
+						"internalType": "int256",
+						"name": "growth",
+						"type": "int256"
+					}
+				],
+				"name": "computeRebasePercentage",
+				"outputs": [
+					{
+						"internalType": "int256",
+						"name": "",
+						"type": "int256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "cpiOracle",
+				"outputs": [
+					{
+						"internalType": "contract IOracle",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "deviationThreshold",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "epoch",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract ICMMD",
+						"name": "cmmd_",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "baseCpi_",
+						"type": "uint256"
+					}
+				],
+				"name": "initialize",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "marketOracle",
+				"outputs": [
+					{
+						"internalType": "contract IOracle",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "rebase",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "rebaseFunctionGrowth",
+				"outputs": [
+					{
+						"internalType": "int256",
+						"name": "",
+						"type": "int256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "rebaseFunctionLowerPercentage",
+				"outputs": [
+					{
+						"internalType": "int256",
+						"name": "",
+						"type": "int256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "rebaseFunctionUpperPercentage",
+				"outputs": [
+					{
+						"internalType": "int256",
+						"name": "",
+						"type": "int256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract IOracle",
+						"name": "cpiOracle_",
+						"type": "address"
+					}
+				],
+				"name": "setCpiOracle",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "deviationThreshold_",
+						"type": "uint256"
+					}
+				],
+				"name": "setDeviationThreshold",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract IOracle",
+						"name": "marketOracle_",
+						"type": "address"
+					}
+				],
+				"name": "setMarketOracle",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "rebaseFunctionGrowth_",
+						"type": "int256"
+					}
+				],
+				"name": "setRebaseFunctionGrowth",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "rebaseFunctionLowerPercentage_",
+						"type": "int256"
+					}
+				],
+				"name": "setRebaseFunctionLowerPercentage",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "rebaseFunctionUpperPercentage_",
+						"type": "int256"
+					}
+				],
+				"name": "setRebaseFunctionUpperPercentage",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "This is an implementation of the CMMD Ideal Money protocol.      This component regulates the token supply of the CMMD ERC20 token in response to      market oracles.",
+			"kind": "dev",
+			"methods": {
+				"computeRebasePercentage(int256,int256,int256,int256)": {
+					"params": {
+						"normalizedRate": "value of rate/targetRate in DECIMALS decimal fixed point number"
+					},
+					"returns": {
+						"_0": "The percentage of supply to be added or removed."
+					}
+				},
+				"initialize(address,uint256)": {
+					"details": "ZOS upgradable contract initialization method.      It is called at the time of contract creation to invoke parent class initializers and      initialize the contract's state variables."
+				},
+				"rebase()": {
+					"details": "Changes supply with percentage of:  (Upper-Lower)/(1-(Upper/Lower)/2^(Growth*NormalizedPriceDelta))) + Lower"
+				},
+				"setCpiOracle(address)": {
+					"params": {
+						"cpiOracle_": "The address of the cpi oracle contract."
+					}
+				},
+				"setDeviationThreshold(uint256)": {
+					"params": {
+						"deviationThreshold_": "The new exchange rate threshold fraction."
+					}
+				},
+				"setMarketOracle(address)": {
+					"params": {
+						"marketOracle_": "The address of the market oracle contract."
+					}
+				}
+			},
+			"title": "CMMD Monetary Supply Policy",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"computeRebasePercentage(int256,int256,int256,int256)": {
+					"notice": "Computes the percentage of supply to be added or removed: Using the function in https://github.com/ampleforth/AIPs/blob/master/AIPs/aip-5.md"
+				},
+				"rebase()": {
+					"notice": "Initiates a new rebase operation, provided the minimum time period has elapsed."
+				},
+				"setCpiOracle(address)": {
+					"notice": "Sets the reference to the CPI oracle."
+				},
+				"setDeviationThreshold(uint256)": {
+					"notice": "Sets the deviation threshold fraction. If the exchange rate given by the market         oracle is within this fractional distance from the targetRate, then no supply         modifications are made. DECIMALS fixed point number."
+				},
+				"setMarketOracle(address)": {
+					"notice": "Sets the reference to the Market oracle."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/CMMDPolicy.sol": "CMMDPolicy"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/CMMDPolicy.sol": {
+			"keccak256": "0x1114493c2e29f283c02c08eaab3b20ac794a858650dcb0f79814357e4d2bf27e",
+			"license": "GPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://d390bb5295c98b99389667abc459ae5800dcd558b8f62b1f9f8fa8e8138f36c1",
+				"dweb:/ipfs/QmVyKRn5LKwemrvN2SmPpPnaWCd8T36Mk2S4XtuCTXpJtM"
+			]
+		},
+		"contracts/SafeMath.sol": {
+			"keccak256": "0x9df017fe6246ad0038edd17dbae1eb17cda90595586e10ba6db9630688819371",
+			"urls": [
+				"bzz-raw://959f430947d3c01472c927d43e2420ff5603de0237876cd85443ee3031283234",
+				"dweb:/ipfs/Qmdk4qzwGhMLVH6cW7jeYSkuRBWyszz37Yyt5Xhc4zgHvM"
+			]
+		},
+		"contracts/SafeMathInt.sol": {
+			"keccak256": "0x5b01d664d0ef57fff63ebfb76f068406e9dae631ecbd14e344af1ece8391c547",
+			"license": "GPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://9f2a990a8008bc668bc6c89a4a101d46dcbb13d7b2ba7f8415f9a442542d5c0f",
+				"dweb:/ipfs/QmQqAmprT8C637VFQAakfqeWh6NwrRQoCgEn6DjZT6xHav"
+			]
+		}
+	},
+	"version": 1
+}

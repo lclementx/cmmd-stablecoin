@@ -1,0 +1,319 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					}
+				],
+				"name": "PrintData",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "provider",
+						"type": "address"
+					}
+				],
+				"name": "ProviderAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "provider",
+						"type": "address"
+					}
+				],
+				"name": "ProviderRemoved",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "provider",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "payload",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "ProviderReportPushed",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "provider",
+						"type": "address"
+					}
+				],
+				"name": "addProvider",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getData",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "minimumProviders",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "printData",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "providerReports",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "payload",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "providers",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "providersSize",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "purgeReports",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "payload",
+						"type": "uint256"
+					}
+				],
+				"name": "pushReport",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "provider",
+						"type": "address"
+					}
+				],
+				"name": "removeProvider",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "minimumProviders_",
+						"type": "uint256"
+					}
+				],
+				"name": "setMinimumProviders",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"addProvider(address)": {
+					"params": {
+						"provider": "Address of the provider."
+					}
+				},
+				"getData()": {
+					"returns": {
+						"_0": "Price for now, don't need to do any calculation"
+					}
+				},
+				"providersSize()": {
+					"returns": {
+						"_0": "The number of authorized providers."
+					}
+				},
+				"pushReport(uint256)": {
+					"params": {
+						"payload": "is expected to be 18 decimal fixed point number."
+					}
+				},
+				"removeProvider(address)": {
+					"params": {
+						"provider": "Address of the provider."
+					}
+				},
+				"setMinimumProviders(uint256)": {
+					"params": {
+						"minimumProviders_": "The new minimum number of providers."
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"addProvider(address)": {
+					"notice": "Authorizes a provider."
+				},
+				"getData()": {
+					"notice": "Allows me to push a report and return the data"
+				},
+				"purgeReports()": {
+					"notice": "Invalidates the reports of the calling provider."
+				},
+				"pushReport(uint256)": {
+					"notice": "Pushes a report for the calling provider."
+				},
+				"removeProvider(address)": {
+					"notice": "Revokes provider authorization."
+				},
+				"setMinimumProviders(uint256)": {
+					"notice": "Sets the minimum number of providers with valid reports to         consider the aggregate report valid."
+				}
+			},
+			"notice": "Provides a value onchain that's aggregated from a whitelisted set of         providers.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Oracle.sol": "Oracle"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Oracle.sol": {
+			"keccak256": "0x7c679e77d666e9a916770a947a6c81fc13e07832f52b0556c5f6803f1246ae90",
+			"license": "GPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://bfe762c80cd4a87050aaddd99274dc64ee2baab940206b5505bfad5bf18db8d1",
+				"dweb:/ipfs/QmaGnV6NkYe8yyPskYqLqLsq86KoBC1CaciXuahdbo52Q5"
+			]
+		}
+	},
+	"version": 1
+}
