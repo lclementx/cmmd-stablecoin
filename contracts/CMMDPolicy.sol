@@ -31,6 +31,19 @@ contract CMMDPolicy {
         uint256 timestampSec
     );
 
+    event Transfer(address from, address receiver, uint amount, uint256 timestamp);
+    
+    uint256 faucetCount;
+
+    struct TransferStruct {
+        address sender;
+        address receiver;
+        uint amount;
+        uint256 timestamp;
+    }
+
+    TransferStruct[] transactions;
+
     ICMMD public cmmd;
 
     // Provides the current CPI, as an 18 decimal fixed point number.
@@ -40,7 +53,7 @@ contract CMMDPolicy {
     IOracle public marketOracle;
 
     // CPI value at the time of launch, as an 18 decimal fixed point number.
-    uint256 private baseCpi;
+    uint256 public baseCpi;
 
     // If the current exchange rate is within this fractional distance from the target, no supply
     // update is performed. Fixed point number--same format as the rate.
@@ -147,6 +160,14 @@ contract CMMDPolicy {
     function setDeviationThreshold(uint256 deviationThreshold_) public {
         deviationThreshold = deviationThreshold_;
     }
+  
+    /**
+     * @notice Sets the Base CPI - for ease of demo and testing 
+     * @param baseCpi_ The new exchange rate threshold fraction.
+     */
+    function setBaseCpi(uint256 baseCpi_) public {
+        baseCpi = baseCpi_;
+    }
 
     /**
      * @dev ZOS upgradable contract initialization method.
@@ -249,4 +270,9 @@ contract CMMDPolicy {
             (rate < targetRate && SafeMath.sub(targetRate,rate) < absoluteDeviationThreshold);
     }
 
+    function faucet(address payable receiver, uint amount) public {
+        faucetCount += 1;
+        transactions.push(TransferStruct(msg.sender, receiver, amount, block.timestamp));
+        emit Transfer(msg.sender, receiver, amount, block.timestamp);
+    }
 }

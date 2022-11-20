@@ -351,6 +351,24 @@
 				"inputs": [
 					{
 						"internalType": "address",
+						"name": "requestor",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "requestTokens",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
 						"name": "who",
 						"type": "address"
 					}
@@ -682,11 +700,11 @@
 			]
 		},
 		"contracts/CMMD.sol": {
-			"keccak256": "0x780cef46ffe435262ac558574f3c4eaad582bb5f057fe4d0ed6e07efd345d152",
+			"keccak256": "0x75b6845ce7f4372ccea0c0b39d4b84636a5e54ed776b4ed8fbfb871d027d89e2",
 			"license": "GPL-3.0-or-later",
 			"urls": [
-				"bzz-raw://7fe6686943a12462d1719a7ba10031eda041d8b0d6654e49ddcf42bdfb22d17c",
-				"dweb:/ipfs/QmUjcDADWwUYUCPYAmp241B8gvgxbU8nPvMRrysVZEAL6K"
+				"bzz-raw://580032b908073331a765ffd070573d0e5d42a91918540bda3b760fc9893054a6",
+				"dweb:/ipfs/QmbwkakkwktnhqvLqipCwUGL1b5uoA9BymgiQf3KiSe4Ep"
 			]
 		}
 	},

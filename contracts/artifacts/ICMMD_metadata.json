@@ -71,11 +71,11 @@
 	},
 	"sources": {
 		"contracts/CMMDPolicy.sol": {
-			"keccak256": "0x1114493c2e29f283c02c08eaab3b20ac794a858650dcb0f79814357e4d2bf27e",
+			"keccak256": "0x7b897bd060e18bf07ec94352e694ee77e5ff2b2c751dd63be4a3ce21701c1938",
 			"license": "GPL-3.0-or-later",
 			"urls": [
-				"bzz-raw://d390bb5295c98b99389667abc459ae5800dcd558b8f62b1f9f8fa8e8138f36c1",
-				"dweb:/ipfs/QmVyKRn5LKwemrvN2SmPpPnaWCd8T36Mk2S4XtuCTXpJtM"
+				"bzz-raw://a33f164b941f5ba50f7b8d99e654955d5b0cd0661319dbef10db4a429464c80f",
+				"dweb:/ipfs/QmWh7taCdbtDFgDx3heFC3VUj4cpwKyzvFabvBtZiiGotc"
 			]
 		},
 		"contracts/SafeMath.sol": {

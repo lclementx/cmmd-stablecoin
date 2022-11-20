@@ -1,0 +1,111 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "balanceOf",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "decimals",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "transfer",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"balanceOf(address)": {
+					"details": "returns the tokens owned by `account`."
+				},
+				"decimals()": {
+					"details": "returns the decimal places of a token"
+				},
+				"transfer(address,uint256)": {
+					"details": "transfers the `amount` of tokens from caller's account to the `recipient` account. returns boolean value indicating the operation status. Emits a {Transfer} event"
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Faucet.sol": "IERC20"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Faucet.sol": {
+			"keccak256": "0x4e2efb5dbe29db6764c65a6c133e150432a1f8b0e06845230dfd42ea9d26118b",
+			"urls": [
+				"bzz-raw://5f39930bf239ab824fdd8391cebbff1f0b9a19451166880f5dd0ff2fa0433f93",
+				"dweb:/ipfs/Qmb7FMHSCRpzPpHsUbL5KQX5c3YboEym9dwi9WyfX1YEG5"
+			]
+		}
+	},
+	"version": 1
+}

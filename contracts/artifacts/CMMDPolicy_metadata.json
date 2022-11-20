@@ -43,6 +43,50 @@
 				"type": "event"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "receiver",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "Transfer",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "baseCpi",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "cmmd",
 				"outputs": [
@@ -131,6 +175,24 @@
 			{
 				"inputs": [
 					{
+						"internalType": "address payable",
+						"name": "receiver",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "faucet",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "contract ICMMD",
 						"name": "cmmd_",
 						"type": "address"
@@ -203,6 +265,19 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "baseCpi_",
+						"type": "uint256"
+					}
+				],
+				"name": "setBaseCpi",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -302,6 +377,11 @@
 				"rebase()": {
 					"details": "Changes supply with percentage of:  (Upper-Lower)/(1-(Upper/Lower)/2^(Growth*NormalizedPriceDelta))) + Lower"
 				},
+				"setBaseCpi(uint256)": {
+					"params": {
+						"baseCpi_": "The new exchange rate threshold fraction."
+					}
+				},
 				"setCpiOracle(address)": {
 					"params": {
 						"cpiOracle_": "The address of the cpi oracle contract."
@@ -329,6 +409,9 @@
 				},
 				"rebase()": {
 					"notice": "Initiates a new rebase operation, provided the minimum time period has elapsed."
+				},
+				"setBaseCpi(uint256)": {
+					"notice": "Sets the Base CPI - for ease of demo and testing "
 				},
 				"setCpiOracle(address)": {
 					"notice": "Sets the reference to the CPI oracle."
@@ -360,11 +443,11 @@
 	},
 	"sources": {
 		"contracts/CMMDPolicy.sol": {
-			"keccak256": "0x1114493c2e29f283c02c08eaab3b20ac794a858650dcb0f79814357e4d2bf27e",
+			"keccak256": "0x7b897bd060e18bf07ec94352e694ee77e5ff2b2c751dd63be4a3ce21701c1938",
 			"license": "GPL-3.0-or-later",
 			"urls": [
-				"bzz-raw://d390bb5295c98b99389667abc459ae5800dcd558b8f62b1f9f8fa8e8138f36c1",
-				"dweb:/ipfs/QmVyKRn5LKwemrvN2SmPpPnaWCd8T36Mk2S4XtuCTXpJtM"
+				"bzz-raw://a33f164b941f5ba50f7b8d99e654955d5b0cd0661319dbef10db4a429464c80f",
+				"dweb:/ipfs/QmWh7taCdbtDFgDx3heFC3VUj4cpwKyzvFabvBtZiiGotc"
 			]
 		},
 		"contracts/SafeMath.sol": {

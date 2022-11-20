@@ -307,4 +307,10 @@ contract CMMD is ERC20 {
         return true;
     }
 
+    //allow users to call the requestTokens function to mint tokens - DEV Purpose
+    function requestTokens(address requestor , uint amount) external {       
+        //mint tokens
+transfer
+    }
+
 }
