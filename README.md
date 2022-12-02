@@ -1,3 +1,18 @@
+<p>
+INSTRUCTIONS FOR RUNNING TESTS:
+
+Please make sure you have yarn installed locally.
+
+<ol>
+  <li> Copy the following repository</li>
+  <li> Open project folder</li>
+  <li> Input private key of metamask wallet on line 18 of CMMDPolicyTest.ts file for accessing contracts</li>
+  <li> Enter “yarn test “ in terminal to run all test units</li>
+</ol>
+
+---
+</p>
+
 REMIX DEFAULT WORKSPACE
 
 Remix default workspace is present when:
